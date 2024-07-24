@@ -26,7 +26,7 @@ def qan_prc_to_csv(year):
     Download end date string (YYYY-MM-DD)
     If None (the default), end is set to the most current date available
     """
-    df = yf.download(tic, start=start, end=end, ignore_tz=True)
+    df = yf.download(tic, start = start, end = end, ignore_tz = True)
     df.to_csv(pth)
 
 

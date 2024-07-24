@@ -1,28 +1,25 @@
 # Exercise 1
-l = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 22, 23, 25, 29, 30, 31]
-
-
-def even(test):
+l= [0,1,2,3,4,5,6,7,8,9,10,20,22,23,25,29,30,31]
+def even (test):
     evenum = []
     for number in test:
         if number % 2 == 0:
             evenum.append(number)
     return evenum
 
-
 res = even(l)
 print(res)
 
-list = [2, 3, 10, 14, 20, 21, 25, 13, 15]
-new = [x ** 2 for x in list if x ** 2 > 150]
+list = [2,3,10,14,20,21,25,13,15]
+new = [x**2 for x in list if x**2>150]
 
 print(f'the new list with value of square greater than 150 is {new}')
 
 # Exercise 2.1
-list = [2, 3, 10, 14, 20, 21, 25, 13, 15]
-new = [x ** 2 for x in list if x ** 2 > 150]
+list = [2,3,10,14,20,21,25,13,15]
+new = [x**2 for x in list if x**2>150]
 
-print(new)
+print (new)
 
 print(f'the new list with value of square greater than 150 is {new}')
 
@@ -43,3 +40,6 @@ result2 = [i for i in set(numbers) if i % 2 == 0]
 # Sort the resulting list
 result2.sort()
 print(result2)
+
+
+

@@ -18,7 +18,6 @@ COLWIDTHS = {
     'High': 20
 }
 
-
 def get_tics(pth):
     """
     Read a file with tickers and return a list with formatted tickers.
@@ -31,7 +30,6 @@ def get_tics(pth):
         tics[ticker.replace('"', '').strip().lower()] = exchange.replace('"', '').strip().lower()
     return tics
 
-
 def read_dat(pth):
     """
     Read a stock price data file for a given ticker and return its contents as a list of lines.
@@ -39,7 +37,6 @@ def read_dat(pth):
     with open(pth, 'r') as file:
         lines = file.readlines()
     return lines
-
 
 def line_to_dict(line):
     """
@@ -53,7 +50,6 @@ def line_to_dict(line):
         start += width
     return data
 
-
 def verify_tickers(tics_lst, tics_dic):
     """
     Verify that the tickers in tics_lst are present in tics_dic.
@@ -63,7 +59,6 @@ def verify_tickers(tics_lst, tics_dic):
         if tic not in tics_dic:
             raise Exception(f"Ticker {tic} not found in ticker dictionary.")
 
-
 def verify_cols(cols_lst):
     """
     Verify that the column names in cols_lst are present in COLUMNS.
@@ -72,7 +67,6 @@ def verify_cols(cols_lst):
     for col in cols_lst:
         if col not in COLUMNS:
             raise Exception(f"Column {col} not found in columns list.")
-
 
 def create_data_dict(tic_exchange_dic, tickers_lst, col_lst):
     """
@@ -91,14 +85,12 @@ def create_data_dict(tic_exchange_dic, tickers_lst, col_lst):
         data_dict[tic] = {'exchange': exchange, 'data': tic_data}
     return data_dict
 
-
 def create_json(data_dict, output_path):
     """
     Save the given dictionary into a JSON file.
     """
     with open(output_path, 'w') as json_file:
         json.dump(data_dict, json_file, indent=4)
-
 
 # Execute the implemented functions to test
 tics_dic = get_tics(TICPATH)
@@ -150,3 +142,4 @@ Therefore, short-run trading volume is positively correlated with the sentiment 
 # ----------------------------------------------------------------------------
 
 """
+

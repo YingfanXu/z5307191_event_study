@@ -93,6 +93,8 @@ def get_tics(pth):
     return tics
 
 
+
+
 # ----------------------------------------------------------------------------
 #   Please complete the body of this function so it matches its docstring
 #   description. See the assessment description file for more information.
@@ -106,6 +108,7 @@ def read_dat(tic):
     with open(pth, 'r') as file:
         lines = file.readlines()
     return lines
+
 
 
 # ----------------------------------------------------------------------------
@@ -125,6 +128,7 @@ def line_to_dict(line):
     return data
 
 
+
 # ----------------------------------------------------------------------------
 #   Please complete the body of this function so it matches its docstring
 #   description. See the assessment description file for more information.
@@ -139,11 +143,13 @@ def verify_tickers(tic_exchange_dic, tickers_lst=None):
             raise Exception(f"Column {col} not found in columns list.")
 
 
+
 # ----------------------------------------------------------------------------
 #   Please complete the body of this function so it matches its docstring
 #   description. See the assessment description file for more information.
 # ----------------------------------------------------------------------------
 def verify_cols(col_lst=None):
+
     """
     Verify that the column names in cols_lst are present in COLUMNS.
     Raise an Exception if any column name is not found.
@@ -153,11 +159,13 @@ def verify_cols(col_lst=None):
             raise Exception(f"Column {col} not found in columns list.")
 
 
+
 # ----------------------------------------------------------------------------
 #   Please complete the body of this function so it matches its docstring
 #   description. See the assessment description file for more information.
 # ----------------------------------------------------------------------------
 def create_data_dict(tic_exchange_dic, tickers_lst=None, col_lst=None):
+
     """
     Transform the data found in the .dat files into a single dictionary.
     """
@@ -175,20 +183,23 @@ def create_data_dict(tic_exchange_dic, tickers_lst=None, col_lst=None):
     return data_dict
 
 
+
 # ----------------------------------------------------------------------------
 #   Please complete the body of this function so it matches its docstring
 #   description. See the assessment description file for more information.
 # ----------------------------------------------------------------------------
 def create_json(data_dict, pth):
+
     """
         Save the given dictionary into a JSON file.
         """
     with open(output_path, 'w') as json_file:
         json.dump(data_dict, json_file, indent=4)
 
-    # ----------------------------------------------------------------------------
-    #    Please put your answers for the last question here:
-    # ----------------------------------------------------------------------------
+
+# ----------------------------------------------------------------------------
+#    Please put your answers for the last question here:
+# ----------------------------------------------------------------------------
     """
     '''
 1. Explanation for Configuring Paths (Step 1):
@@ -217,7 +228,6 @@ Therefore, short-run trading volume is positively correlated with the sentiment 
 # ----------------------------------------------------------------------------
 
     """
-
 
 # ----------------------------------------------------------------------------
 #   Test functions:
@@ -313,3 +323,8 @@ if __name__ == "__main__":
     # _test_create_data_dict()
     # _test_create_json(os.path.join(DATDIR, 'data.json'))  # Save the file to data/data.json
     pass
+
+
+
+
+
